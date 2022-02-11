@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="#cff4d9"
+    android:layout_margin="5sp"
+    app:cardCornerRadius="5sp"
+    app:cardElevation="5sp"
+    app:contentPaddingLeft="10sp"
+    app:contentPaddingRight="10sp"
+    app:contentPaddingTop="5sp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5sp"
+        android:paddingVertical="5sp"
+        android:layout_marginHorizontal="7sp"
+        >
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/rowTripName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:text="Trip Name: "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:paddingLeft="7sp"
+            android:paddingTop="5sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/rowTripDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:text="Trip Date: "
+            android:layout_below="@+id/rowTripName"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:paddingLeft="7sp"
+            android:paddingTop="5sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/rowTripSeason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rowTripDate"
+            android:focusable="true"
+            android:text="Trip Season: "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:paddingLeft="7sp"
+            android:paddingTop="5sp"
+            android:textStyle="bold"/>
+<!-- android:background="?android:selectableItemBackground" android:clickable="true"-->
+        <TextView
+            android:id="@+id/rowTripReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rowTripSeason"
+            android:focusable="true"
+            android:text="Trip Reason: "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:paddingLeft="7sp"
+            android:paddingTop="5sp"
+            android:textStyle="bold"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOpen"
+            android:layout_width="80sp"
+            android:layout_height="36sp"
+            android:layout_below="@id/picture"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="3sp"
+            android:background="@drawable/w205072"
+            android:text="OPEN"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDelete"
+            android:layout_width="80sp"
+            android:layout_height="36sp"
+            android:layout_below="@id/picture"
+            android:layout_toRightOf="@id/btnOpen"
+            android:background="@drawable/w205072"
+            android:layout_marginTop="5sp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="DELETE"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

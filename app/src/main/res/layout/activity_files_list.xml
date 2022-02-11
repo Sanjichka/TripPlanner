@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TripsListActivity"
+    android:background="#cff4d2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Toolbar"
+        android:background="#205072"
+        app:title="@string/app_name"
+        tools:ignore="MissingConstraints" />
+    
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conlay1"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_start"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/blue_background"
+        android:paddingHorizontal="20sp"
+        android:paddingBottom="10sp"
+        >
+
+        <TextView
+            android:id="@+id/listFilesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="#cff4d2"
+            android:text="@string/trip_name"
+            android:textSize="25sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conlay2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conlay1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="2sp">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnOrderPreserved="false"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:columnCount="2"
+                    android:rowCount="4"
+                    android:alignmentMode="alignMargins">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/activitiesToDoCV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardElevation="6sp"
+                        app:cardCornerRadius="12sp"
+                        android:layout_margin="12sp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="16sp">
+
+                            <ImageView
+                                android:layout_width="80sp"
+                                android:layout_height="80sp"
+                                android:src="@drawable/activities" />
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="12sp"
+                                android:textColor="#205072"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:text="Activities \n to do"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/placesToVisitCV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardElevation="6sp"
+                        app:cardCornerRadius="12sp"
+                        android:layout_margin="12sp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16sp">
+
+                            <ImageView
+                                android:layout_width="80sp"
+                                android:layout_height="80sp"
+                                android:src="@drawable/places" />
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="12sp"
+                                android:textColor="#205072"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:text="Places \nto visit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/clothesCV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardElevation="6sp"
+                        app:cardCornerRadius="12sp"
+                        android:layout_margin="12sp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16sp">
+
+                            <ImageView
+                                android:layout_width="80sp"
+                                android:layout_height="80sp"
+                                android:src="@drawable/clothes" />
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="12sp"
+                                android:textColor="#205072"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:text="Clothes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/accessoriesCV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardElevation="6sp"
+                        app:cardCornerRadius="12sp"
+                        android:layout_margin="12sp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16sp">
+
+                            <ImageView
+                                android:layout_width="80sp"
+                                android:layout_height="80sp"
+                                android:src="@drawable/accessories" />
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="12sp"
+                                android:textColor="#205072"
+                                android:textSize="14sp"
+                                android:text="Accessories"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/shoppingListCV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardElevation="6sp"
+                        app:cardCornerRadius="12sp"
+                        android:layout_margin="12sp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="16sp">
+
+                            <ImageView
+                                android:layout_width="80sp"
+                                android:layout_height="80sp"
+                                android:src="@drawable/shopping" />
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="12sp"
+                                android:textColor="#205072"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:text="Shopping \n list"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/mealIdeasCV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardElevation="6sp"
+                        app:cardCornerRadius="12sp"
+                        android:layout_margin="12sp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16sp">
+
+                            <ImageView
+                                android:layout_width="80sp"
+                                android:layout_height="80sp"
+                                android:src="@drawable/meals" />
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="12sp"
+                                android:textColor="#205072"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:text="Meal ideas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/buyFoodCV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardElevation="6sp"
+                        app:cardCornerRadius="12sp"
+                        android:layout_margin="12sp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16sp">
+
+                            <ImageView
+                                android:layout_width="80sp"
+                                android:layout_height="80sp"
+                                android:src="@drawable/buyfood" />
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="12sp"
+                                android:textColor="#205072"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:text="Food to buy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/takeFoodCV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        app:cardElevation="6sp"
+                        app:cardCornerRadius="12sp"
+                        android:layout_margin="12sp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16sp">
+
+                            <ImageView
+                                android:layout_width="80sp"
+                                android:layout_height="80sp"
+                                android:src="@drawable/takefood" />
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="12sp"
+                                android:textColor="#205072"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:text="Food to take"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </GridLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

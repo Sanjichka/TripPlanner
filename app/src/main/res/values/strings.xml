@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TripPlanner</string>
+    <string name="app_nickname">Triplist</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="signIn">SIGN IN</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="you_don_t_have_account">You don\'t have account?</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="confirm_the_password">Confirm the password</string>
+    <string name="sign_in_text">Sign In</string>
+    <string name="you_do_have_account">You do have account?</string>
+    <string name="trip_details">Trip Details</string>
+    <string name="enter_trip_s_name">Enter trip\'s name</string>
+    <string name="_0_trips">(0 trips)</string>
+    <string name="trip_list">Trip List</string>
+    <string name="trip_name">Trip Name</string>
+    <string name="activities_to_do">Activities to do</string>
+
+
+</resources>

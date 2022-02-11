@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".PlusTripActivity"
+    android:orientation="vertical"
+    android:background="#cff4d2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Toolbar"
+        app:title="@string/app_name"
+        android:background="#7be495"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="15sp">
+
+            <TextView
+                android:id="@+id/detailsTrip"
+                android:textSize="40sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50sp"
+                android:layout_marginBottom="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trip_details"
+                android:textColor="#56c596"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:paddingHorizontal="15sp">
+
+                <EditText
+                    android:id="@+id/tripName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_field"
+                    android:drawableLeft="@drawable/ic_name_24"
+                    android:drawablePadding="10sp"
+                    android:hint="@string/enter_trip_s_name"
+                    android:inputType="textEmailAddress"
+                    android:paddingVertical="10sp"
+                    android:paddingLeft="30sp"
+                    android:textColor="#205072" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:paddingHorizontal="15sp">
+
+                <EditText
+                    android:id="@+id/tripDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_field"
+                    android:drawableLeft="@drawable/ic_calendar_24"
+                    android:drawablePadding="10sp"
+                    android:hint="Set Date"
+                    android:inputType="none"
+                    android:paddingVertical="10sp"
+                    android:paddingLeft="30dp"/>
+
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/seasonText"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Season:"
+                android:textColor="#56c596"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgSeason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10sp">
+
+                <RadioButton
+                    android:id="@+id/seasonRB1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Winter"
+                    android:buttonTint="#205072"
+                    android:textStyle="bold"
+                    android:textColor="#7be495"
+                    android:checked="true"
+                    android:onClick="radioClick"/>
+
+                <RadioButton
+                    android:id="@+id/seasonRB2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spring"
+                    android:textStyle="bold"
+                    android:textColor="#7be495"
+                    android:buttonTint="#205072"
+                    android:onClick="radioClick"/>
+
+                <RadioButton
+                    android:id="@+id/seasonRB3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Summer"
+                    android:textStyle="bold"
+                    android:textColor="#7be495"
+                    android:buttonTint="#205072"
+                    android:onClick="radioClick"/>
+
+                <RadioButton
+                    android:id="@+id/seasonRB4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Autumn"
+                    android:textStyle="bold"
+                    android:textColor="#7be495"
+                    android:buttonTint="#205072"
+                    android:onClick="radioClick"/>
+
+            </RadioGroup>
+
+
+
+
+            <TextView
+                android:id="@+id/reasonText"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reason:"
+                android:textColor="#56c596"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="15sp">
+
+                <RadioButton
+                    android:id="@+id/reasonRB1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Work"
+                    android:buttonTint="#205072"
+                    android:textStyle="bold"
+                    android:textColor="#7be495"
+                    android:onClick="radioClick1"/>
+
+                <RadioButton
+                    android:id="@+id/reasonRB2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Friends"
+                    android:textStyle="bold"
+                    android:textColor="#7be495"
+                    android:buttonTint="#205072"
+                    android:onClick="radioClick1"/>
+
+                <RadioButton
+                    android:id="@+id/reasonRB3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Relax+Rest"
+                    android:checked="true"
+                    android:textStyle="bold"
+                    android:textColor="#7be495"
+                    android:buttonTint="#205072"
+                    android:onClick="radioClick1"/>
+
+            </RadioGroup>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addTripButton"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:text="ADD"
+                android:textColor="#ffffff"
+                android:background="@drawable/w7be495"
+                android:layout_marginTop="18sp"
+                android:textSize="20sp"
+                android:layout_marginRight="15sp"
+                android:layout_marginLeft="15sp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
