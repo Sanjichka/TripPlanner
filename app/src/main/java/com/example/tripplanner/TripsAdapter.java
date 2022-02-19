@@ -185,7 +185,7 @@ public class TripsAdapter extends RecyclerView.Adapter<TripsAdapter.TripsViewHol
                     public void onClick(DialogInterface dialog, int which) {
                         // continue with delete
                         root.child("TripDetails-"+userID).child(docIDArray.get(position)).removeValue();
-
+                        root.child("Files-"+userID).child(tripNamesArray.get(position)).removeValue();
                     }
                 });
                 alert.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
